@@ -513,17 +513,17 @@ SendSuppressedKeyUp(key) {
 ~LAlt::SendSuppressedKeyUp "LAlt"
 
 <em>; 测试热键:</em>
-!CapsLock::MsgBox % A_ThisHotkey
+!CapsLock::MsgBox A_ThisHotkey
 
 <em>; 重映射 CapsLock 为 LCtrl 以与 IME 兼容的方式.</em>
 *CapsLock::
 {
-    Send {Blind}{LCtrl DownR}
+    Send "{Blind}{LCtrl DownR}"
     SendSuppressedKeyUp "LCtrl"
 }
 *CapsLock up::
 {
-    Send {Blind}{LCtrl Up}
+    Send "{Blind}{LCtrl Up}"
 }
 </pre>
 
